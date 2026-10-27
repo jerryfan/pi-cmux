@@ -10,6 +10,7 @@
 - Added `cmux-review` with `/review-v` and `/review-h`, plus bundled `code-review` skill and `/review` / `/review-diff` prompt templates for focused review workflows, including GitHub pull request review via `gh` when given a PR URL.
 - Added `cmux-continue` with `/cmcv` and `/cmch` for split-based task handoff in the current checkout or by creating a git worktree branch with `-c <branch>`.
 - Added `cmux-open` with `/cmo`, `/cmov`, and `/cmoh` to open a new split and run any shell command there.
+- Added optional localized copy for `/cmo`, `/cmov`, and `/cmoh` when a Pi i18n provider is present.
 
 ### Changed
 
@@ -18,6 +19,7 @@
 - Made `/cmrv` and `/cmrh` default to reviewing the current git diff when run without arguments.
 - Extended `/cmcv -c` and `/cmch -c` to support `--from <ref>` / `-f <ref>` when creating a new worktree branch.
 - Added `PI_CMUX_NOTIFY_LEVEL=all|medium|low|disabled` so notification verbosity can be configured with one opinionated setting.
+- Added `PI_CMUX_NOTIFY_INCLUDE_RESPONSE=1` to optionally append the final assistant response to non-error notifications.
 
 ### Fixed
 
